@@ -8,11 +8,11 @@
   </head>
   <body>
     <div class="container">
-      <button>Send a Message!</button>
+      <a href="/new">Send a Message!</a>
       <div>
-        <h1>Messages</h1>
+        <!-- <h1>Messages</h1> -->
         <% messages.forEach(message => { %> <%- include('messageCard', {message:
-        message.message, to: message.to, added: message.added}) %> <% }) %>
+        message.text, to: message.to, added: message.added}) %> <% }) %>
       </div>
     </div>
   </body>
