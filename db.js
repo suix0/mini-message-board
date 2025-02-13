@@ -23,7 +23,7 @@ const messages = [
   },
   {
     text: "How have you been?",
-    to: "Jean",
+    to: "Katsuragi",
     added: date,
     id: crypto.randomUUID(),
   },

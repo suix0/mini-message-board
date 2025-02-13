@@ -254,3 +254,59 @@ form {
   width: 200px;
   border-radius: 3rem;
 }
+
+@media (width <= 1150px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  .detailsContainer {
+    grid-area: unset;
+    margin-right: 3rem;
+    margin-left: 3rem;
+  }
+
+  .formContainer {
+    grid-area: unset;
+    margin-right: 3rem;
+    margin-left: 3rem;
+  }
+
+  .container {
+    grid-area: unset;
+    margin-right: 3rem;
+    margin-left: 3rem;
+  }
+  .container > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .btnContainer {
+    position: unset;
+    margin: 0;
+  }
+}
+
+@media (width <= 650px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    grid-area: unset;
+    margin-right: 3rem;
+    margin-left: 3rem;
+  }
+
+  .container > div {
+    grid-template-columns: 1fr;
+  }
+
+  .formInput textarea {
+    width: 80%;
+  }
+}
