@@ -216,6 +216,10 @@ form {
   border-bottom: 1px solid;
   padding: 0.5rem;
   text-align: left;
+  color: var(--bg);
+  background-color: var(--third);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .to span {
