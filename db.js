@@ -16,8 +16,8 @@ const messages = [
     id: crypto.randomUUID(),
   },
   {
-    text: "I still miss you",
-    to: "Jean",
+    text: "I wish I could see you play someday!!!",
+    to: "Steph Curry",
     added: date,
     id: crypto.randomUUID(),
   },
