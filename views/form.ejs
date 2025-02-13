@@ -7,20 +7,30 @@
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
-    <p>Make it sincere</p>
-    <form action="/new" method="POST">
-      <div class="formInput">
-        <label for="to">To</label>
-        <input type="text" id="to" name="to" required />
-      </div>
-      <div class="formInput">
-        <label for="text">Message</label>
-        <textarea id="text" name="text" required></textarea>
-      </div>
-      <div class="btnContainer">
-        <a href="/">Back</a>
-        <button type="submit">Send!</button>
-      </div>
-    </form>
+    <div class="formContainer">
+      <p>Make it sincere</p>
+      <form action="/new" method="POST">
+        <div class="formInput">
+          <label for="to">To</label>
+          <input type="text" id="to" name="to" required />
+        </div>
+        <div class="formInput">
+          <label for="text">Message</label>
+          <textarea id="text" name="text" required></textarea>
+        </div>
+        <div class="btnContainer">
+          <a href="/">Back</a>
+          <button type="submit">Send!</button>
+        </div>
+      </form>
+    </div>
+    <script>
+      const textArea = document.querySelector("textarea");
+      textArea.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          document.querySelector("form").submit();
+        }
+      });
+    </script>
   </body>
 </html>
