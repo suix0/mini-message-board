@@ -8,6 +8,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -19,6 +20,29 @@ body {
   overflow: hidden;
   background-color: var(--bg);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body > p {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: var(--third);
+  font-weight: bold;
+  font-style: italic;
+  background-color: var(--second);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  background-color: var(--second);
+  width: 30vw;
+  border-radius: 1rem;
+  position: relative;
 }
 
 .container {
@@ -50,4 +74,66 @@ body {
   border-radius: 1rem;
   width: 100%;
   text-align: center;
+}
+
+.btnContainer {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.btnContainer a {
+  text-decoration: none;
+  padding: 0.5rem;
+  background-color: var(--third);
+  width: 100px;
+  text-align: center;
+  color: var(--bg);
+  font-size: 1.5rem;
+  border-radius: 1rem;
+}
+
+.btnContainer button {
+  padding: 0.5rem;
+  background-color: var(--third);
+  width: 100px;
+  text-align: center;
+  color: var(--bg);
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 1rem;
+}
+
+.formInput {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.formInput label {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.formInput input {
+  padding: 0.5rem;
+  width: 40%;
+  border-radius: 0.5rem;
+  border: none;
+  border: 1px solid var(--third);
+  font-size: 1.5rem;
+}
+
+.formInput textarea {
+  resize: vertical;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--third);
+  width: 50%;
+  font-size: 1.5rem;
 }

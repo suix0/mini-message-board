@@ -1,11 +1,26 @@
-<form action="/new" method="POST">
-  <div>
-    <label for="to">To</label>
-    <input type="text" id="to" name="to" required />
-  </div>
-  <div>
-    <label for="text">Message</label>
-    <textarea id="text" name="text" required></textarea>
-  </div>
-  <button type="submit">Send!</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Message Form</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <p>Make it sincere</p>
+    <form action="/new" method="POST">
+      <div class="formInput">
+        <label for="to">To</label>
+        <input type="text" id="to" name="to" required />
+      </div>
+      <div class="formInput">
+        <label for="text">Message</label>
+        <textarea id="text" name="text" required></textarea>
+      </div>
+      <div class="btnContainer">
+        <a href="/">Back</a>
+        <button type="submit">Send!</button>
+      </div>
+    </form>
+  </body>
+</html>
