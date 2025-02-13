@@ -1,6 +1,6 @@
 const { messages } = require("../db");
 
-const getHomepage = (req, res) => {
+const getHomepage = (req, res, next) => {
   res.render("index.ejs", { messages: messages });
 };
 

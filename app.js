@@ -15,6 +15,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/", indexRouter);
 app.use("/new", formRouter);
 app.use("/details", detailsRouter);
+
+app.use((req, res, next) => {
+  res.status(404);
+  res.render("404", { message: "The page you're looking for doesn't exist." });
+});
+
+app.use((err, req, res, next) => {
+  res.status(err.statusCode || 500);
+  res.render("404", { message: err.message });
+});
+
 const PORT = 5000;
 
 app.listen(PORT, () => console.log(`Server listening at port ${PORT}`));

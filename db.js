@@ -4,18 +4,6 @@ const { format } = require("date-fns");
 const date = format(new Date(), "EEE, MMMM dd, yyyy, H:MM bb");
 const messages = [
   {
-    text: "Hi there!",
-    to: "Amando",
-    added: date,
-    id: crypto.randomUUID(),
-  },
-  {
-    text: "Hello World!",
-    to: "Charles",
-    added: date,
-    id: crypto.randomUUID(),
-  },
-  {
     text: "I wish I could turn back time.",
     to: "Mark",
     added: date,
@@ -24,6 +12,12 @@ const messages = [
   {
     text: "How have you been?",
     to: "Katsuragi",
+    added: date,
+    id: crypto.randomUUID(),
+  },
+  {
+    text: "I still miss you",
+    to: "Jean",
     added: date,
     id: crypto.randomUUID(),
   },
