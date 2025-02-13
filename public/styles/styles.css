@@ -26,6 +26,50 @@ svg {
   height: auto;
 }
 
+table {
+  grid-area: 1/2;
+
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  background-color: var(--second);
+  margin-bottom: 2rem;
+}
+
+th[scope="col"] {
+  font-weight: bold;
+  font-style: italic;
+  background-color: var(--third);
+  border: 1px solid var(--fourth);
+  color: var(--bg);
+}
+
+th.middle[scope="col"] {
+  border-top: 1px solid var(--fourth);
+  border-bottom: 1px solid var(--fourth);
+}
+
+th.middle {
+  border: none;
+  border-bottom: 1px solid var(--third);
+}
+
+th {
+  padding: 1rem;
+  border: 1px solid var(--third);
+  border-top: none;
+  font-weight: normal;
+}
+
+tr {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+table caption {
+  margin-bottom: 2rem;
+}
+
 .formContainer {
   grid-area: 1/2;
 }
@@ -65,7 +109,8 @@ form {
   grid-area: 1/2;
 }
 
-.container > a {
+.container > a,
+.detailsContainer > h1 {
   background-color: var(--second);
   padding: 1rem;
   text-decoration: none;
@@ -104,7 +149,8 @@ form {
   cursor: pointer;
 }
 
-.btnContainer a {
+.btnContainer a,
+.detailsHome {
   text-decoration: none;
   padding: 0.5rem;
   background-color: var(--third);
@@ -191,4 +237,20 @@ form {
 .message {
   height: 100px;
   padding: 0.5rem;
+}
+
+.detailsContainer {
+  margin-top: 4rem;
+  grid-area: 1/2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detailsHome {
+  text-align: center;
+  padding: 1rem;
+  width: 200px;
+  border-radius: 3rem;
 }

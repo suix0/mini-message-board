@@ -12,7 +12,8 @@
       <div>
         <!-- <h1>Messages</h1> -->
         <% messages.forEach(message => { %> <%- include('messageCard', {message:
-        message.text, to: message.to, added: message.added}) %> <% }) %>
+        message.text, to: message.to, added: message.added, id: message.id}) %>
+        <% }) %>
       </div>
     </div>
   </body>
