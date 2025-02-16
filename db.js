@@ -1,36 +1,42 @@
 const { format } = require("date-fns");
 
+const getDate = () => {
+  const currentDate = new Date();
+  const formattedDate = format(currentDate, "EEE, MMMM dd, yyyy, HH:mm a");
+  return formattedDate;
+};
+
 // Sample data
-const date = format(new Date(), "EEE, MMMM dd, yyyy, H:MM bb");
 const messages = [
   {
     text: "I wish I could turn back time.",
     to: "Mark",
-    added: date,
+    added: getDate(),
     id: crypto.randomUUID(),
   },
   {
     text: "How have you been?",
     to: "Katsuragi",
-    added: date,
+    added: getDate(),
     id: crypto.randomUUID(),
   },
   {
     text: "I wish I could see you play someday!!!",
     to: "Steph Curry",
-    added: date,
+    added: getDate(),
     id: crypto.randomUUID(),
   },
 ];
 
-const appendData = async (data) => {
+const appendData = (data) => {
   // Add data of submission
-  data.added = format(new Date(), "EEE, MMMM dd, yyyy, H:MM bb");
+  data.added = getDate();
   data.id = crypto.randomUUID();
+  console.log(messages);
   messages.push(data);
 };
 
-const getMessage = async (id) => {
+const getMessage = (id) => {
   return messages.find((message) => message.id === id);
 };
 

@@ -3,6 +3,7 @@ const indexRouter = require("./routes/indexRouter");
 const formRouter = require("./routes/formRouter");
 const detailsRouter = require("./routes/detailsRouter");
 const path = require("node:path");
+const { body, validationResult } = require("express-validator");
 
 const app = express();
 
