@@ -10,6 +10,7 @@
     <div class="formContainer">
       <p>Make it sincere</p>
       <form action="/new" method="POST">
+        <%- include('errors/error') %>
         <div class="formInput">
           <label for="to">To</label>
           <input type="text" id="to" name="to" required />

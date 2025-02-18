@@ -1,7 +1,7 @@
 const express = require("express");
 const indexRouter = require("./routes/indexRouter");
-// const formRouter = require("./routes/formRouter");
-// const detailsRouter = require("./routes/detailsRouter");
+const formRouter = require("./routes/formRouter");
+const detailsRouter = require("./routes/detailsRouter");
 const path = require("node:path");
 
 require("dotenv").config();
@@ -15,8 +15,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/", indexRouter);
-// app.use("/new", formRouter);
-// app.use("/details", detailsRouter);
+app.use("/new", formRouter);
+app.use("/details", detailsRouter);
 
 app.use((req, res, next) => {
   res.status(404);
