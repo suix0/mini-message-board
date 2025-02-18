@@ -1,4 +1,4 @@
-const { addData } = require("../db/query");
+const { addMessages } = require("../db/query");
 const asyncHandler = require("express-async-handler");
 const { body, validationResult } = require("express-validator");
 
@@ -7,12 +7,12 @@ const validateMessage = [
     .notEmpty()
     .withMessage("Name can't be empty")
     .isLength({ min: 1, max: 20 })
-    .withMessage("Message has a maximum of 30 characters."),
+    .withMessage("Name has a maximum of 30 characters."),
   body("text")
     .notEmpty()
     .withMessage("Message can't be empty")
-    .isLength({ min: 1, max: 35 })
-    .withMessage("Message has a maximum of 35 characters."),
+    .isLength({ min: 1, max: 25 })
+    .withMessage("Message has a maximum of 25 characters."),
 ];
 
 const getForm = (req, res) => {
@@ -26,8 +26,8 @@ const postFormData = [
     if (!errors.isEmpty()) {
       return res.status(400).render("form", { errors: errors.array() });
     }
-    const formData = req.body;
-    await addData(formData);
+    const { to, text } = req.body;
+    await addMessages(to, text);
     res.redirect("/");
   }),
 ];

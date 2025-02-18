@@ -15,7 +15,7 @@ const getMessage = async (messageId) => {
 
 const addMessages = async (receiver, message) => {
   await pool.query(
-    "INERT INTO messages (receiver, message) VALUES (($1), ($2))",
+    "INSERT INTO messages (receiver, message) VALUES (($1), ($2))",
     [receiver, message]
   );
 };
