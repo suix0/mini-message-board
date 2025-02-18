@@ -258,6 +258,14 @@ form {
   border-radius: 3rem;
 }
 
+.errors {
+  color: red;
+}
+
+.errors li {
+  list-style: none;
+}
+
 @media (width <= 1150px) {
   body {
     grid-template-columns: 1fr;

@@ -1,4 +1,5 @@
 const { Client } = require("pg");
+const { argv } = require("node:process");
 
 const SQL = `
 CREATE TABLE messages (
@@ -17,13 +18,7 @@ VALUES
 
 async function main() {
   console.log("seeding");
-  const client = new Client({
-    hostname: process.env.HOSTNAME,
-    user: process.env.USER,
-    password: process.env.DATABASE_PASSWORD,
-    database: process.env.DATABASE,
-    port: process.env.DATABASE_PORT,
-  });
+  const client = new Client(argv[0]);
   await client.connect();
   await client.query(SQL);
   await client.end();

@@ -10,13 +10,20 @@
     <div class="formContainer">
       <p>Make it sincere</p>
       <form action="/new" method="POST">
+        <%- include('errors/error') %>
         <div class="formInput">
           <label for="to">To</label>
           <input type="text" id="to" name="to" required />
         </div>
         <div class="formInput">
           <label for="text">Message</label>
-          <textarea id="text" name="text" required></textarea>
+          <textarea
+            id="text"
+            name="text"
+            cols="27"
+            rows="3"
+            required
+          ></textarea>
         </div>
         <div class="btnContainer">
           <a href="/">Back</a>

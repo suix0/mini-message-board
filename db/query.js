@@ -5,4 +5,19 @@ const getMessages = async () => {
   return rows;
 };
 
-module.exports = { getMessages };
+const getMessage = async (messageId) => {
+  const { rows } = await pool.query(
+    "SELECT * FROM messages WHERE messages.id = ($1)",
+    [messageId]
+  );
+  return rows;
+};
+
+const addMessages = async (receiver, message) => {
+  await pool.query(
+    "INSERT INTO messages (receiver, message) VALUES (($1), ($2))",
+    [receiver, message]
+  );
+};
+
+module.exports = { getMessages, addMessages, getMessage };
