@@ -1,13 +1,8 @@
-const pool = require("./db");
+const pool = require("./pool");
 
 const getMessages = async () => {
-  const messages = await pool.query("SELECT * FROM messages;");
-  return messages;
+  const { rows } = await pool.query("SELECT * FROM messages;");
+  return rows;
 };
 
-const printMessages = async () => {
-  const { rows } = await getMessages();
-  console.log(rows);
-};
-
-printMessages();
+module.exports = { getMessages };

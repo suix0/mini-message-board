@@ -11,8 +11,8 @@
       <a href="/new">Send a Message!</a>
       <div>
         <% messages.forEach(message => { %> <%- include('messageCard', {message:
-        message.text, to: message.to, added: message.added, id: message.id}) %>
-        <% }) %>
+        message.message, to: message.receiver, added: message.date, id:
+        message.id}) %> <% }) %>
       </div>
     </div>
   </body>
