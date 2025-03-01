@@ -6,9 +6,7 @@ An Express application I made where users can send messages to someone anonymous
 
 This project is currently in deployment through Render for the express app and Neon for the database.
 
-## Project Screen Shot(s)
-
-#### Example:   
+## Project Screen Shot(s)  
 
 ![image](https://github.com/user-attachments/assets/3188a620-ccf7-48b3-b81e-6dd6be5daba9)
 ![image](https://github.com/user-attachments/assets/9c88a539-90b2-4276-839d-f0a51c3bc67b)
@@ -17,8 +15,6 @@ This project is currently in deployment through Render for the express app and N
 
 
 ## Installation and Setup Instructions
-
-#### Example:  
 
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
